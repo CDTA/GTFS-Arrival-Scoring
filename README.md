@@ -19,32 +19,7 @@ The first results are not terrible in terms of accuracy if you use the sliding s
 | &lt;5m&gt;2min | &lt;1min | 1-1.5min | 1.5-2min | &gt;2min |
 | &lt;2min | &lt;30sec | 30s-45s | 45s-60s | &gt;1min |
 
-<!--[if gte vml 1]><v:shapetype
- id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
- path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
- <v:stroke joinstyle="miter"/>
- <v:formulas>
-  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
-  <v:f eqn="sum @0 1 0"/>
-  <v:f eqn="sum 0 0 @1"/>
-  <v:f eqn="prod @2 1 2"/>
-  <v:f eqn="prod @3 21600 pixelWidth"/>
-  <v:f eqn="prod @3 21600 pixelHeight"/>
-  <v:f eqn="sum @0 0 1"/>
-  <v:f eqn="prod @6 1 2"/>
-  <v:f eqn="prod @7 21600 pixelWidth"/>
-  <v:f eqn="sum @8 21600 0"/>
-  <v:f eqn="prod @7 21600 pixelHeight"/>
-  <v:f eqn="sum @10 21600 0"/>
- </v:formulas>
- <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
- <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="Picture_x0020_4" o:spid="_x0000_i1026" type="#_x0000_t75"
- alt="11 (11.11%) &#10;15 &#10;(15.15%) &#10;25 (25.25%) &#10;Sliding Predication Scoring &#10;48 (48.48%) &#10;Score &#10;O GREAT &#10;e BAD &#10;O GOOD &#10;Sliding Prediction Scoring &#10;Scale = Predication Generate Time - Schedule Arrival Time &#10;Arrival Delta = Predicated Arrival Time — Actual Arrival Time &#10;SCALE &#10;10min &#10;&lt; 10m&gt;5min &#10;&lt;5m&gt;2min &#10;&lt;2min &#10;GREAT &#10;&lt;2min &#10;&lt; 1.5min &#10;&lt;lmin &#10;&lt; 30sec &#10;GOOD &#10;2-3min &#10;1.5-2min &#10;1-1.5min &#10;30s-45s &#10;Count &#10;OK &#10;3_4min &#10;2-3min &#10;1.5-2min &#10;45s-60s &#10;&gt;4min &#10;&gt;3min &#10;&gt;2min &#10;&gt; 1 min &#10;Score &#10;GREAT &#10;BAD &#10;GOOD &#10;OK &#10;Total &#10;Percent &#10;48.48% &#10;25.25% &#10;15.15% &#10;11.11% &#10;100.00% &#10;17148088 &#10;9121250 &#10;5336220 &#10;3931471 &#10;35537029 &#10;"
- style='width:468pt;height:240pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="file:///C:/Users/richf/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png"
-  o:title="11 (11.11%) &#10;15 &#10;(15.15%) &#10;25 (25.25%) &#10;Sliding Predication Scoring &#10;48 (48"/>
-</v:shape><![endif]--><![if !vml]>![11 (11.11%) &#10;15 &#10;(15.15%) &#10;25 (25.25%) &#10;Sliding Predication Scoring &#10;48 (48.48%) &#10;Score &#10;O GREAT &#10;e BAD &#10;O GOOD &#10;Sliding Prediction Scoring &#10;Scale = Predication Generate Time - Schedule Arrival Time &#10;Arrival Delta = Predicated Arrival Time — Actual Arrival Time &#10;SCALE &#10;10min &#10;&lt; 10m&gt;5min &#10;&lt;5m&gt;2min &#10;&lt;2min &#10;GREAT &#10;&lt;2min &#10;&lt; 1.5min &#10;&lt;lmin &#10;&lt; 30sec &#10;GOOD &#10;2-3min &#10;1.5-2min &#10;1-1.5min &#10;30s-45s &#10;Count &#10;OK &#10;3_4min &#10;2-3min &#10;1.5-2min &#10;45s-60s &#10;&gt;4min &#10;&gt;3min &#10;&gt;2min &#10;&gt; 1 min &#10;Score &#10;GREAT &#10;BAD &#10;GOOD &#10;OK &#10;Total &#10;Percent &#10;48.48% &#10;25.25% &#10;15.15% &#10;11.11% &#10;100.00% &#10;17148088 &#10;9121250 &#10;5336220 &#10;3931471 &#10;35537029 &#10;](file:///C:/Users/richf/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)<![endif]>
+power-bi-report.png
 
 ## Potential Data Issues 
 
@@ -56,18 +31,16 @@ There are still three data issues we are running down as we dig into this more:�
 
 Either way a lot more digging to go through in terms of data and some cleanup but End to End this really shows it is possible to build something relatively easily in the cloud.  
 
+![power-bi-report](https://github.com/user-attachments/assets/59a18812-6aad-4140-9808-b86aaf03c97b)
+
 # Technical Overview 
  
 ## Architecture 
  
 The overall architecture looks like this. 
  
- <!--[if gte vml 1]><v:shape id="Picture_x0020_3"
- o:spid="_x0000_i1025" type="#_x0000_t75" alt="A diagram of a software project&#10;&#10;Description automatically generated with medium confidence"
- style='width:468pt;height:354.75pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="file:///C:/Users/richf/AppData/Local/Temp/msohtmlclip1/01/clip_image003.png"
-  o:title="A diagram of a software project&#10;&#10;Description automatically generated with medium confidence"/>
-</v:shape><![endif]--><![if !vml]>![A diagram of a software project&#10;&#10;Description automatically generated with medium confidence](file:///C:/Users/richf/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png)<![endif]>
+![technical-overview](https://github.com/user-attachments/assets/97d618ff-fe71-4192-bcdc-10b4c4b2f5c8)
+
 
 ### How did we do this? 
 
